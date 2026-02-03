@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import { LoginPages } from "./pages/loginPages";
+import { LoginPages } from "./pages/LoginPages";
 import { HomePages } from "./pages/HomePages";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { MainPageLayout } from "./layout/MainPageLayout";
