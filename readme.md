@@ -95,3 +95,16 @@ jalankan backend API Express yang akan di gunakan
 npm run dev
 Frontend Akan berjalan di http://localhost:5173
 ```
+
+## 📸 Screenshots
+
+### Login Page
+
+![Login](assets/loginpage-desktop.png)
+![Login](assets/loginpage-mobile.png)
+
+### HomePage
+
+![Homepage](assets/homepage-desktop.png)
+![Homepage](assets/homepage-mobile.png)
+![Sidebar](assets/sidebar-mobile.png)
