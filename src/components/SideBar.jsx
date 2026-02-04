@@ -14,8 +14,7 @@ export const SideBar = props => {
   const navigate = useNavigate();
   const logout = async () => {
     try {
-      const res = await api.post("/auth/logout");
-      console.log(res.data);
+      await api.post("/auth/logout");
       setUser(null);
       navigate("/login");
     } catch (error) {

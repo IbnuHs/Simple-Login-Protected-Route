@@ -19,7 +19,6 @@ export const ProtectedRoute = () => {
       </div>
     );
   }
-  console.log(user);
   if (!user) {
     return <Navigate to={"/login"} replace />;
   }
