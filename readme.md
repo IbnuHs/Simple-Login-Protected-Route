@@ -32,13 +32,13 @@ Project ini menangani autentikasi user (login + protected route) menggunakan Rea
 
 1. **Validasi Form Login**
 
-Pada form login terdapat validasi bawaan HTML seperti pengecekan format email (`type="email"`) dan validasi field wajib (`required`).  
+Pada form login terdapat validasi bawaan HTML seperti pengecekan format email (`type="email"`) dan validasi field wajib (`required`). selain itu ada juga pengecekan validasi email di backend.
 Jika user mengirim form dengan input kosong atau format email tidak valid, browser akan otomatis menampilkan peringatan.
 
 Selain itu, ketika proses login gagal (misalnya email atau password salah), aplikasi akan menampilkan pesan error di bawah form login.
 
 Setelah login berhasil, JWT akan disimpan oleh backend dalam bentuk **HttpOnly Cookie**.  
-Cookie ini digunakan untuk autentikasi pada setiap request berikutnya tanpa perlu menyimpan token di `localStorage`.
+Cookie ini digunakan untuk autentikasi pada setiap request berikutnya.
 
 ---
 
