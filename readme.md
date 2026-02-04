@@ -100,8 +100,8 @@ Frontend Akan berjalan di http://localhost:5173
 
 ### Desktop Layout
 
-![Homepage](./src/assets/homepage-desktop.png)
 ![Login](./src/assets/loginpage-desktop.png)
+![Homepage](./src/assets/homepage-desktop.png)
 
 ### Mobile Layout
 
