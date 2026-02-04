@@ -17,6 +17,11 @@ Project ini menangani autentikasi user (login + protected route) menggunakan Rea
 
 ---
 
+## Account Testing
+
+- **email:** user1@gmail.com
+- **password:** password123
+
 ## ✨ Features
 
 - Login Authentication
