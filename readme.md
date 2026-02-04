@@ -28,6 +28,46 @@ Project ini menangani autentikasi user (login + protected route) menggunakan Rea
 
 ---
 
+## 🔍 Explain
+
+1. **Validasi Form Login**
+
+Pada form login terdapat validasi bawaan HTML seperti pengecekan format email (`type="email"`) dan validasi field wajib (`required`).  
+Jika user mengirim form dengan input kosong atau format email tidak valid, browser akan otomatis menampilkan peringatan.
+
+Selain itu, ketika proses login gagal (misalnya email atau password salah), aplikasi akan menampilkan pesan error di bawah form login.
+
+Setelah login berhasil, JWT akan disimpan oleh backend dalam bentuk **HttpOnly Cookie**.  
+Cookie ini digunakan untuk autentikasi pada setiap request berikutnya tanpa perlu menyimpan token di `localStorage`.
+
+---
+
+2. **Protected Route**
+
+Untuk menjaga halaman utama (Dashboard), aplikasi menggunakan **Protected Route** dan **Auth Context**.
+
+Saat user mengakses halaman Dashboard, frontend akan melakukan pengecekan autentikasi dengan memanggil endpoint backend.  
+Jika token di cookie tidak ada atau tidak valid, user otomatis diarahkan kembali ke halaman Login.
+
+Hal ini memastikan hanya user yang sudah login yang dapat mengakses halaman utama.
+
+---
+
+3. **Axios Configuration**
+
+Axios dikonfigurasi dengan opsi `withCredentials: true` agar cookie JWT otomatis ikut terkirim pada setiap request ke backend.
+
+Dengan konfigurasi ini, frontend tidak perlu menyimpan token secara manual dan seluruh proses autentikasi berbasis cookie.
+
+---
+
+4. **Logout**
+
+Saat user melakukan logout, frontend akan memanggil endpoint logout pada backend.  
+Backend kemudian menghapus JWT yang tersimpan di cookie.
+
+Setelah itu user diarahkan kembali ke halaman Login dan tidak dapat mengakses Dashboard sebelum melakukan login ulang.
+
 ## 🛠️ Cara Menjalankan Project
 
 ### 1. Clone Repository
