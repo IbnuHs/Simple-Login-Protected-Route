@@ -12,7 +12,6 @@ export const LoginPages = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  //   const [isError, setIsError] = usestate;
   const [errMessage, setErrMessage] = useState("");
   const navigate = useNavigate();
   const submitForm = async e => {
@@ -21,7 +20,7 @@ export const LoginPages = () => {
       setErrMessage("");
       setLoading(true);
       await api.post("/auth/login", { email, password });
-      navigate("/");
+      window.location.href = "/";
     } catch (error) {
       setLoading(false);
       setErrMessage(error.response.data.message);
